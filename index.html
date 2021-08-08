@@ -9,6 +9,13 @@
 
     <!-- ÍCONES -->
     <link rel="stylesheet" href="./assets/fonts/style.css" />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <!-- STYLES -->
     <link rel="stylesheet" href="style.css" />
 
@@ -151,71 +158,110 @@
 
       <!-- TESTIMONIALS -->
       <section class="section" id="testimonials">
-        <div class="container grid">
+        <div class="container">
           <header>
             <h2 class="title">Depoimentos de quem já passou por aqui.</h2>
           </header>
-          <div class="testimonials">
-            <div class="testimonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Explicabo sequi fugiat debitis at exercitationem consequatur
-                  enim dignissimos, laborum iste accusantium beatae repudiandae
-                  corrupti corporis atque magni similique, minus totam delectus.
-                </p>
-                <cite>
-                  <img
-                    src="https://randomuser.me/api/portraits/men/88.jpg"
-                    alt="Fulado de almeida"
-                  />
-                  Fulado de almeida
-                </cite>
-              </blockquote>
+          <!-- Swiper Slider main Container -->
+          <div class="testimonials swiper-container">
+            <!-- Swiper Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Swiper Sliders -->
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Explicabo sequi fugiat debitis at exercitationem consequatur
+                    enim dignissimos, laborum iste accusantium beatae
+                    repudiandae corrupti corporis atque magni similique, minus
+                    totam delectus.
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/men/88.jpg"
+                      alt="Fulado de almeida"
+                    />
+                    Fulado de almeida
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Explicabo sequi fugiat debitis at exercitationem consequatur
+                    enim dignissimos, laborum iste accusantium beatae
+                    repudiandae corrupti corporis atque magni similique, minus
+                    totam delectus.
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/men/93.jpg"
+                      alt="Ciclano Ferreira"
+                    />
+                    Ciclano Ferreira
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Explicabo sequi fugiat debitis at exercitationem consequatur
+                    enim dignissimos, laborum iste accusantium beatae
+                    repudiandae corrupti corporis atque magni similique, minus
+                    totam delectus.
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/men/34.jpg"
+                      alt="Beltrano Araújo"
+                    />
+                    Beltrano Araújo
+                  </cite>
+                </blockquote>
+              </div>
             </div>
-            <div class="testimonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Explicabo sequi fugiat debitis at exercitationem consequatur
-                  enim dignissimos, laborum iste accusantium beatae repudiandae
-                  corrupti corporis atque magni similique, minus totam delectus.
-                </p>
-                <cite>
-                  <img
-                    src="https://randomuser.me/api/portraits/men/93.jpg"
-                    alt="Ciclano Ferreira"
-                  />
-                  Ciclano Ferreira
-                </cite>
-              </blockquote>
-            </div>
-            <div class="testimonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Explicabo sequi fugiat debitis at exercitationem consequatur
-                  enim dignissimos, laborum iste accusantium beatae repudiandae
-                  corrupti corporis atque magni similique, minus totam delectus.
-                </p>
-                <cite>
-                  <img
-                    src="https://randomuser.me/api/portraits/men/34.jpg"
-                    alt="Beltrano Araújo"
-                  />
-                  Beltrano Araújo
-                </cite>
-              </blockquote>
-            </div>
+            <!-- Swiper pagination -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
 
+      <div class="divider-2"></div>
+
       <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente!</h2>
+            <p>
+              Entre em contato com a Beautysalon, queremo tirar suas dúvidas,
+              ouvir suas críticas e sugestões.
+            </p>
+            <a href="" class="button"
+              ><i class="icon-whatsapp"></i>Entrar em contato</a
+            >
+          </div>
+
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> 11 99845 6754</li>
+              <li><i class="icon-map-pin"></i> R. Fulano Souza, 346</li>
+              <li><i class="icon-mail"></i> contato@beautysalon.com</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="main.js"></script>
   </body>
