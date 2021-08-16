@@ -18,10 +18,10 @@ for (const link of links) {
 }
 
 /* Mudar o header da pagina quando der scroll */
-function changeHeaderWhenScroll() {
-  const header = document.querySelector('#header')
-  const navHeight = header.offsetHeight
+const header = document.querySelector('#header')
+const navHeight = header.offsetHeight
 
+function changeHeaderWhenScroll() {
   if (window.scrollY >= navHeight) {
     // Se o Scroll é maior que a altura do header
     header.classList.add('scroll')
@@ -39,7 +39,13 @@ const swiper = new Swiper('.swiper-container', {
     el: '.swiper-pagination'
   },
   mousewheel: true,
-  keyboard: true
+  keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 })
 
 // ScrollReveal Library
@@ -63,9 +69,9 @@ scrollReveal.reveal(
 )
 
 /* Back-to-top Button */
+const backToTopButton = document.querySelector('.back-to-top')
 
 function backToTop() {
-  const backToTopButton = document.querySelector('.back-to-top')
   if (window.scrollY >= 560) {
     backToTopButton.classList.add('show')
   } else {
@@ -73,8 +79,35 @@ function backToTop() {
   }
 }
 
+// Menu Ativo conforme a sessão da página
+const sections = document.querySelectorAll('main section[id]')
+
+function activateMenuAtCurrentSection() {
+  const checkPoint = window.pageYOffset + (window.innerHeight / 8) * 4
+
+  for (const section of sections) {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute(`id`)
+
+    const checkPointStart = checkPoint >= sectionTop
+    const checkPointEnd = checkPoint <= sectionTop + sectionHeight
+
+    if (checkPointStart && checkPointEnd) {
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
+        .classList.add('active')
+    } else {
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
+        .classList.remove('active')
+    }
+  }
+}
+
 // When Scroll
 window.addEventListener('scroll', function () {
   changeHeaderWhenScroll()
   backToTop()
+  activateMenuAtCurrentSection()
 })
